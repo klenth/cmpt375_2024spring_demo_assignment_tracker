@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add assignment</title>
+</head>
+<body>
+    <h1>Add assignment</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {% comment %}
+            CSRF - Cross-Site Request Forgery - a security attack that
+            uses forms on other sites to manage your web application
+        {% endcomment %}
+        
+        Title: <input type="text" name="title">
+        <br>
+        Description: <textarea name="description"></textarea>
+        <br>
+        <input type="submit">
+    </form>
+
+</body>
+</html>
